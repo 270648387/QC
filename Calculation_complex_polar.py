@@ -20,16 +20,20 @@ def divide_polar(r1, th1, r2, th2):
     theta = th1 - th2
     return r, to_deg(theta) 
 
-print(f"\nPlease enter the first Polar coordinate:\n")
-r1 = float(input("Magnitude:"))
-th1 = float(input("Angle:"))
+def main():
+    print(f"\nPlease enter the first Polar coordinate:\n")
+    r1 = float(input("Magnitude:"))
+    th1 = float(input("Angle:"))
 
-print(f"\nPlease enter the second Polar coordinate:\n")
-r2 = float(input("Magnitude:"))
-th2 = float(input("Angle:"))
+    print(f"\nPlease enter the second Polar coordinate:\n")
+    r2 = float(input("Magnitude:"))
+    th2 = float(input("Angle:"))
 
-prod = multiply_polar(r1,th1,r2,th2)
-quot = divide_polar(r1,th1,r2,th2)
+    prod = multiply_polar(r1,th1,r2,th2)
+    quot = divide_polar(r1,th1,r2,th2)
 
-print(f"\nc1 * c2 : ({prod[0]:.2f}, {prod[1]:.2f}°)")
-print(f"\nc1 / c2 : ({quot[0]:.2f}, {quot[1]:.2f}°)")
+    print(f"\nc1 * c2 : ({prod[0]:.2f}, {prod[1]:.2f}°)")
+    print(f"\nc1 / c2 : ({quot[0]:.2f}, {quot[1]:.2f}°)")
+
+if __name__ == "__main__":
+    main()
